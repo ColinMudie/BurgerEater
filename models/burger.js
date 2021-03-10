@@ -1,4 +1,3 @@
-const { update } = require("../../Classwork/MVC/17-CatsApp/Solved/config/orm");
 const orm = require("../config/orm");
 
 const burger = {
