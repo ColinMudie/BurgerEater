@@ -8,8 +8,8 @@ const burger = {
         orm.create("burgers", column, value, (res) => cb(res));
     },
 
-    update(column, value, condition, cb) {
-        orm.update("burgers", column, value, condition, (res) => cb(res));
+    update(value, condition, cb) {
+        orm.update("burgers", "eaten", value, condition, (res) => cb(res));
     },
 };
 

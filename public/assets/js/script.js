@@ -2,16 +2,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (event) {
         console.info("DOM loaded");
     }
-
+    //CREATE
     const createBurgerBtn = document.getElementById("create-form");
-
     if (createBurgerBtn) {
         createBurgerBtn.addEventListener("submit", (e) => {
             e.preventDefault();
 
             // Grabs the value of the textarea that goes by the name, "quote"
             const newBurger = {
-                name: document.getElementById("ca").value.trim(),
+                name: document.getElementById("add").value.trim(),
             };
 
             // Send POST request to create a new quote
@@ -26,11 +25,41 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 body: JSON.stringify(newBurger),
             }).then(() => {
                 // Empty the form
-                document.getElementById("ca").value = "";
+                document.getElementById("add").value = "";
 
                 // Reload the page so the user can see the new quote
-                console.log("Created a new cat!");
+                console.log("Created a new burger!");
                 location.reload();
+            });
+        });
+    }
+
+    //UPDATE
+    const devourBtn = document.querySelectorAll('.eat');
+    if (devourBtn) {
+        devourBtn.forEach((button) => {
+            button.addEventListener('click', (e) => {
+                const id = e.target.getAttribute('data-id')
+                const devour = e.target.getAttribute('data-devour');
+                const newEatenState = {
+                    eaten: devour,
+                };
+
+                fetch(`/api/burgers/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(newEatenState),                
+                }).then((response) => {
+                    if (response.ok) {
+                        console.log(`changed eaten to: ${devour}`);
+                        location.reload('/');
+                    } else {
+                        alert('something went wrong!');
+                    }
+                });
             });
         });
     }
