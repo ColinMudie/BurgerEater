@@ -10,8 +10,12 @@ const orm = {
         console.log(query.sql);
     },
     create(table, column, value, cb) {
-        let queryString = `INSERT INTO ${table} (${column.toString()}) VALUES (?);`;
-        const query = connection.query(queryString, value, (err, result) => {
+        let queryString = `INSERT INTO ${table} SET ?`;
+        const query = connection.query(queryString,
+            {
+                [column]: value,
+            },
+            (err, result) => {
             if (err) throw err;
             cb(result);
         })

@@ -4,11 +4,11 @@ const burger = {
     all(cb) {
         orm.all("burgers", (res) => cb(res));
     },
-    create(cols, vals, cb) {
-        orm.create("burgers", cols, vals, (res) => cb(res));
+    create(column, value, cb) {
+        orm.create("burgers", column, value, (res) => cb(res));
     },
 
-    update(table, column, value, condition, cb) {
+    update(column, value, condition, cb) {
         orm.update("burgers", column, value, condition, (res) => cb(res));
     },
 };
