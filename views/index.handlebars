@@ -4,7 +4,10 @@
 <ul>
     {{#each burger}}
     {{#unless eaten}}  
-        <p>{{name}} <button type="submit" data-id={{id}} data-devour="true" class="eat">Devour</button></p>
+        <p>{{name}} 
+            <button type="submit" data-id={{id}} data-devour="true" class="eat">Devour</button> 
+            <button class="deleteBtn" data-id={{id}}>X</button>
+        </p>
         
     {{/unless}}
     {{/each}}
@@ -14,7 +17,10 @@
 <ul>
     {{#each burger}}
     {{#if eaten}}
-    <p id={{id}}>{{name}}</p>
+    <p>{{name}} 
+        <button type="submit" data-id={{id}} data-devour="false" class="eat">More?</button> 
+        <button class="deleteBtn" data-id={{id}}>X</button>
+    </p>
     {{/if}}
     {{/each}}
 </ul>

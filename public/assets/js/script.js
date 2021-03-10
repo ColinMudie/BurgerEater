@@ -63,4 +63,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
             });
         });
     }
+
+    //DELETE
+    const deleteBtn = document.querySelectorAll('.deleteBtn');
+
+    deleteBtn.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            const id = e.target.getAttribute('data-id');
+            fetch(`/api/burgers/${id}`, {
+                method: 'DELETE',
+            }).then((res) => {
+                    console.log(res);
+                    console.log(`Deleted burger: ${id}`);
+                    location.reload();                
+            });
+        });
+    })
+
+
+
+
+
+
+
+
+
+
+        
 });

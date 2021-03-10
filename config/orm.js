@@ -1,3 +1,4 @@
+
 const connection = require('./connection');
 
 const orm = {
@@ -23,6 +24,14 @@ const orm = {
     }, 
     update(table, column, value, condition, cb) {
         let queryString = `UPDATE ${table} SET ${column} = ${value} WHERE ${condition};`;
+        const query = connection.query(queryString, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        });
+        console.log(query.sql);
+    },
+    delete(table, condition, cb) {
+        let queryString = `DELETE FROM ${table} WHERE ${condition}`;
         const query = connection.query(queryString, (err, result) => {
             if (err) throw err;
             cb(result);

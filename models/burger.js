@@ -11,6 +11,9 @@ const burger = {
     update(value, condition, cb) {
         orm.update("burgers", "eaten", value, condition, (res) => cb(res));
     },
+    delete(condition, cb) {
+        orm.delete("burgers", condition, (res) => cb(res));
+    }
 };
 
 module.exports = burger;
