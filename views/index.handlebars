@@ -9,11 +9,11 @@
                 {{#each burger}}
                 {{#unless eaten}}
                 <div class="card to-be-eaten">
-                    <div class="card-body">
+                    <div class="card-body fun-font">
                         {{name}}
                         <button type="submit" data-id={{id}} data-devour="true"
-                            class="btn btn-primary eat">Devour</button>
-                        <button class="btn btn-primary deleteBtn" data-id={{id}}>X</button>
+                            class="btn btn-primary eat fun-font">Devour</button>
+                        <button class="btn btn-primary deleteBtn fun-font" data-id={{id}}>X</button>
                     </div>
                 </div>
                 {{/unless}}
@@ -26,11 +26,11 @@
                 {{#each burger}}
                 {{#if eaten}}
                 <div class="card devoured">
-                    <div class="card-body">
+                    <div class="card-body fun-font">
                         {{name}}
                         <button type="submit" data-id={{id}} data-devour="false"
-                            class="btn btn-primary eat">More?</button>
-                        <button class="btn btn-primary deleteBtn" data-id={{id}}>X</button>
+                            class="btn btn-primary eat fun-font">More?</button>
+                        <button class="btn btn-primary deleteBtn fun-font" data-id={{id}}>X</button>
                     </div>
                 </div>
                 {{/if}}
@@ -45,9 +45,9 @@
 <form class="form-inline" id="create-form">
     <div class="form-group mx-sm-3 mb-2">
         <label for="for" class="sr-only">Burger Name:</label>
-        <input type="text" class="form-control" id="add" name="name" placeholder="Burger Name">
+        <input type="text" class="form-control fun-font" id="add" name="name" placeholder="Burger Name">
     </div>
-    <button type="submit" class="btn btn-primary mb-2 custom-btn">Add Burger</button>
+    <button type="submit" class="btn btn-primary mb-2 custom-btn fun-font">Add Burger</button>
 </form>
     </div>
 </div>
