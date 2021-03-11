@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(195, 156, 117);
+    background-image: radial-gradient(rgb(215, 178, 140) 10%, transparent 11%),
+    radial-gradient(rgb(215, 178, 140) 10%, transparent 11%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    background-repeat: repeat;
+}
+#main{
+    display:initial;
+    align-items: flex-start;
+    
+}
+.main-content{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.add-more{
+    margin: auto;
+    
+    /* margin: 5%;
+    margin-right: 5%; */
+}
+.custom-nav{
+    background-color: rgb(171, 137, 103);
+}
+.custom-nav-text{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.custom-nav-text:hover{
+    color: rgb(224, 219, 219);
+    text-decoration: none;
+}
+.eat{
+    background-color: rgb(72, 161, 72);
+    border: rgb(72, 161, 72);
+}
+.eat:hover{
+    background-color: rgb(90, 190, 90);
+    border: rgb(90, 190, 90);
+}
+.eat:focus{
+    box-shadow: none;
+    background-color: rgb(90, 190, 90);
+    border: rgb(90, 190, 90);
+}
+.deleteBtn{
+    background-color: rgb(180, 64, 64);
+    border-color: rgb(180, 64, 64);
+}
+.deleteBtn:hover{
+    background-color: rgb(227, 86, 86);
+    border-color: rgb(227, 86, 86);
+}
+.to-be-eaten{
+    /* background-color: blueviolet; */
+    width: fit-content;
+    background-color: rgb(215, 178, 140);
+    border-radius: 25px;
+    
+}
+.devoured{
+    width: fit-content;
+    background-color: rgb(215, 178, 140);
+    border-radius: 25px;
+}
+.custom-btn{
+    background-color: rgb(96, 64, 12);
+    border: rgb(96, 64, 12);
+}
+.custom-btn:hover{
+    background-color: rgb(126, 84, 16);
+    border: rgb(126, 84, 16);
+}
