@@ -1,9 +1,11 @@
-# BurgerEater
+# Eat Da Burger
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Description
-This app tracks burgers you want to eat and burgers you've devoured! The goal with this app was to combine a MySQL database with Express, Express-handlebars, and some ORM to Create, Read, Update, and Delete data from the MySQL db. The burger app follows the MVC design pattern.
+This app tracks burgers you want to eat and burgers you've devoured! The goal with this app was to combine a MySQL database with Express, Express-handlebars, and some ORM to Create, Read, Update, and Delete data from the MySQL db. The burger app follows the MVC design pattern.  
+-  [Live Link](https://eat-da-cheese-curd-burger.herokuapp.com/)
+-  [Github Link](https://github.com/ColinMudie/BurgerEater)
 
 ## Table of Contents
 
