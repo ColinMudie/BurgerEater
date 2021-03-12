@@ -9,6 +9,14 @@ const connection = mysql.createConnection({
     database: 'burger_db',
 });
 
+// const connection = mysql.createConnection({
+//     host: 'localhost',
+//     port: 3306,
+//     user: 'root',
+//     password: process.env.MYSQL_PW,
+//     database: 'burger_db',
+// });
+
 // Make connection.
 connection.connect((err) => {
     // if (err) {
